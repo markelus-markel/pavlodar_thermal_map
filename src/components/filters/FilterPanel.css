@@ -13,6 +13,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 640px) {
+  .filter-panel {
+    width: 100vw;
+  }
+}
+
 .filter-panel__header {
   display: flex;
   align-items: center;

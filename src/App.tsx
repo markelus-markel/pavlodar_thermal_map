@@ -38,6 +38,9 @@ export default function App() {
   const [importOpen, setImportOpen] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
   const [legendCollapsed, setLegendCollapsed] = useState(false);
+  const [layerPanelCollapsed, setLayerPanelCollapsed] = useState(
+    () => typeof window !== "undefined" && window.innerWidth < 640
+  );
   const [activeLayers, setActiveLayers] = useState<Set<MapLayerId>>(new Set(DEFAULT_LAYERS));
   const { theme, toggleTheme } = useTheme();
 
@@ -75,7 +78,12 @@ export default function App() {
               onSelectBuilding={setSelectedBuildingId}
               theme={theme}
             />
-            <LayerPanel activeLayers={activeLayers} onToggle={toggleLayer} />
+            <LayerPanel
+              activeLayers={activeLayers}
+              onToggle={toggleLayer}
+              collapsed={layerPanelCollapsed}
+              onToggleCollapsed={() => setLayerPanelCollapsed((v) => !v)}
+            />
             <Legend collapsed={legendCollapsed} onToggle={() => setLegendCollapsed((v) => !v)} />
             <div className="app-map-footer">
               Показано {filteredBuildings.length} из {allBuildings.length} объектов · срез данных:

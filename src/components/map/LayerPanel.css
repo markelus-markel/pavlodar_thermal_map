@@ -12,14 +12,39 @@
   overflow-y: auto;
 }
 
-.layer-panel__title {
-  padding: var(--sp-3) var(--sp-3) var(--sp-2);
+.layer-panel--collapsed {
+  width: auto;
+  max-height: none;
+}
+
+.layer-panel__toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--text-primary);
-  border-bottom: 1px solid var(--border-subtle);
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  cursor: pointer;
+  padding: var(--sp-3);
+  font-family: var(--font-body);
+}
+
+.layer-panel__toggle span {
+  flex: 1;
+  text-align: left;
+}
+
+.layer-panel--collapsed .layer-panel__toggle {
+  border-bottom: none;
+}
+
+.layer-panel:not(.layer-panel--collapsed) .layer-panel__toggle {
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .layer-panel__list {
@@ -52,4 +77,13 @@
   color: var(--text-tertiary);
   font-style: italic;
   white-space: nowrap;
+}
+
+/* On narrow / mobile viewports the panel caps at a fraction of the screen
+   width so it can never fully obscure the map underneath, even expanded. */
+@media (max-width: 640px) {
+  .layer-panel {
+    width: min(240px, 78vw);
+    max-height: 50vh;
+  }
 }

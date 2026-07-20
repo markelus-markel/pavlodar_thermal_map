@@ -13,6 +13,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 640px) {
+  .building-card {
+    width: 100vw;
+  }
+}
+
 .building-card__header {
   display: flex;
   align-items: flex-start;
