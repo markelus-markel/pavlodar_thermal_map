@@ -1,0 +1,45 @@
+.dashboard {
+  padding: var(--sp-6);
+  overflow-y: auto;
+  height: 100%;
+}
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--sp-4);
+}
+
+.dashboard-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+}
+
+.dashboard-card__value {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dashboard-card__label {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-top: var(--sp-1);
+}
+
+.dashboard-card__hint {
+  font-size: var(--fs-2xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.dashboard__footnote {
+  margin-top: var(--sp-6);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  max-width: 640px;
+  line-height: 1.6;
+}

@@ -1,0 +1,197 @@
+.import-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 12, 0.6);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.import-modal {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  width: min(640px, 92vw);
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-panel);
+}
+
+.import-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.import-modal__header h2 {
+  margin: 0;
+  font-size: var(--fs-lg);
+  color: var(--text-primary);
+}
+
+.import-modal__close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.import-modal__body {
+  padding: var(--sp-5);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.import-modal__intro {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin: 0 0 var(--sp-4);
+  line-height: 1.5;
+}
+
+.import-modal__dropzone {
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  text-align: center;
+}
+
+.import-modal__dropzone:hover {
+  border-color: var(--brand-bright);
+  color: var(--text-primary);
+}
+
+.import-modal__samples {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+}
+
+.import-modal__samples a {
+  color: var(--brand-bright);
+}
+
+.import-modal__result {
+  margin-top: var(--sp-5);
+}
+
+.import-modal__stats {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-3);
+}
+
+.import-modal__stats--ok {
+  color: var(--color-success);
+}
+
+.import-modal__stats--err {
+  color: var(--color-danger);
+}
+
+.import-modal__errors {
+  background: rgba(201, 80, 63, 0.08);
+  border: 1px solid rgba(201, 80, 63, 0.3);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.import-modal__errors-title {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--sp-2);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.import-modal__errors ul {
+  margin: 0;
+  padding-left: var(--sp-4);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.import-modal__more {
+  font-size: var(--fs-2xs);
+  color: var(--text-tertiary);
+  margin-top: var(--sp-2);
+}
+
+.import-modal__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);
+}
+
+.import-modal__table th,
+.import-modal__table td {
+  text-align: left;
+  padding: 4px var(--sp-2);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.import-modal__table th {
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.import-modal__footer {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--border-subtle);
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.import-modal__success {
+  color: var(--color-success);
+  font-size: var(--fs-sm);
+  margin-right: auto;
+}
+
+.import-modal__confirm {
+  background: var(--accent-teal);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.import-modal__confirm:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.import-modal__cancel {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}

@@ -1,0 +1,120 @@
+.building-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-panel);
+  z-index: var(--z-drawer);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.building-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.building-card__id-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.building-card__id {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--brand-bright);
+  font-weight: 600;
+}
+
+.building-card__name {
+  font-size: var(--fs-lg);
+  color: var(--text-primary);
+  margin-top: 4px;
+  font-family: var(--font-display);
+}
+
+.building-card__close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: var(--sp-1);
+}
+
+.building-card__demo-banner {
+  background: rgba(181, 126, 220, 0.12);
+  border-bottom: 1px solid rgba(181, 126, 220, 0.4);
+  color: var(--color-demo);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  padding: var(--sp-2) var(--sp-4);
+  letter-spacing: 0.02em;
+}
+
+.building-card__statuses {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.building-card__tabs {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.building-card__tab {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: var(--fs-xs);
+  padding: var(--sp-3) var(--sp-3);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-body);
+}
+
+.building-card__tab--active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-teal);
+}
+
+.building-card__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--sp-2) var(--sp-4) var(--sp-6);
+}
+
+.building-card__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.building-card__note {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  background: var(--bg-inset);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  line-height: 1.5;
+  margin: var(--sp-2) 0;
+}
+
+.building-card__demo-note {
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin-top: var(--sp-3);
+}

@@ -1,0 +1,49 @@
+.export-menu__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(3, 7, 12, 0.4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: calc(var(--header-height) + var(--sp-2)) var(--sp-4) 0 0;
+}
+
+.export-menu {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  width: 260px;
+  padding: var(--sp-3);
+}
+
+.export-menu__title {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-2);
+}
+
+.export-menu__item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--bg-inset);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-3);
+  margin-bottom: var(--sp-2);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}
+
+.export-menu__item:hover {
+  border-color: var(--brand-bright);
+}
+
+.export-menu__note {
+  font-size: var(--fs-2xs);
+  color: var(--text-tertiary);
+  margin: var(--sp-1) 0 0;
+}

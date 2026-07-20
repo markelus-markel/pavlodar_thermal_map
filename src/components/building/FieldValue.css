@@ -1,0 +1,36 @@
+.field-value {
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.field-value__label {
+  font-size: var(--fs-2xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+
+.field-value__value {
+  font-size: var(--fs-sm);
+  color: var(--text-primary);
+}
+
+.field-value__value--tbd,
+.field-value__value--not_applicable,
+.field-value__value--not_authorized,
+.field-value__value--stale {
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.field-value__value--conflicted {
+  color: var(--color-warning);
+  font-style: italic;
+}
+
+.field-value__hint {
+  font-size: var(--fs-2xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}

@@ -1,0 +1,5 @@
+.three-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}

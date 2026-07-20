@@ -1,0 +1,3 @@
+Reserved for future route-level composition (e.g. Building Workspace /
+Field Workspace / Akimat Observatory as separate routed shells). The MVP
+currently renders a single-page shell directly from src/App.tsx.

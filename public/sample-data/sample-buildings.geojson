@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [76.972, 52.281] },
+      "properties": {
+        "buildingId": "SAMPLE-PVL-001",
+        "demo": true,
+        "displayName": "Пример импорта — дом 1",
+        "locationStatus": "approximate",
+        "buildingType": "soviet_standard",
+        "constructionPeriod": "1960_1979",
+        "floors": 5,
+        "managementForm": "management_company",
+        "heatZone": "zone_tec2_central",
+        "knowledgeStatus": "reported",
+        "riskStatus": "not_assessed",
+        "actionStatus": "data_required",
+        "confidence": "T1",
+        "meterStatus": "unknown",
+        "passportStatus": "identity_only",
+        "inspectionStatus": "not_scheduled",
+        "consumptionDataStatus": "not_collected",
+        "mvStatus": "not_applicable",
+        "renovationReview": "not_reviewed",
+        "observationCategory": "none",
+        "lastUpdated": "2026-07-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [76.958, 52.295] },
+      "properties": {
+        "buildingId": "SAMPLE-PVL-002",
+        "demo": true,
+        "displayName": "Пример импорта — дом 2",
+        "locationStatus": "approximate",
+        "buildingType": "soviet_standard",
+        "constructionPeriod": "1980_1999",
+        "floors": 9,
+        "managementForm": "osi",
+        "heatZone": "zone_tec1_south",
+        "knowledgeStatus": "inspected",
+        "riskStatus": "medium",
+        "actionStatus": "inspection_required",
+        "confidence": "T2",
+        "meterStatus": "installed_uncalibrated",
+        "passportStatus": "topology_linked",
+        "inspectionStatus": "scheduled",
+        "consumptionDataStatus": "partial",
+        "mvStatus": "not_applicable",
+        "renovationReview": "not_reviewed",
+        "observationCategory": "underheating",
+        "lastUpdated": "2026-07-05"
+      }
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+/*
+  HouseMaster Pavlodar Thermal Map — design tokens.
+
+  Palette follows DESIGN_SYSTEM_PRINCIPLES.md: calm, engineering,
+  documentary, institutional. No "red map of bad houses" — red is
+  reserved for confirmed specialist-required risk only.
+*/
+
+:root {
+  /* --- Base neutrals --- */
+  --bg-canvas: #10161f;
+  --bg-surface: #161f2b;
+  --bg-surface-raised: #1c2733;
+  --bg-inset: #0c1119;
+  --border-subtle: #2a3644;
+  --border-strong: #3c4a5c;
+
+  --text-primary: #e7ecf1;
+  --text-secondary: #a9b6c4;
+  --text-tertiary: #6f7f90;
+  --text-inverse: #0c1119;
+
+  /* --- Brand / institutional blues --- */
+  --brand-deep: #0d2f4f;
+  --brand-mid: #1c5a8c;
+  --brand-bright: #3d8fc4;
+  --accent-teal: #2ba7a1;
+
+  /* --- Knowledge status scale (grey -> blue -> green ring) --- */
+  --k-unknown: #5b6673;
+  --k-reported: #6fb3e0;
+  --k-inspected: #3d8fc4;
+  --k-documented: #1c5a8c;
+  --k-verified: #2ba7a1;
+
+  /* --- Risk status scale --- */
+  --r-not-assessed: #5b6673;
+  --r-low: #4fae8a;
+  --r-medium: #d8a638;
+  --r-high: #d97a3d;
+  --r-specialist: #c9503f;
+
+  /* --- Action status scale (categorical, not severity-ordered) --- */
+  --a-none: #5b6673;
+  --a-data: #7c8ea3;
+  --a-inspection: #3d8fc4;
+  --a-quickwin: #4fae8a;
+  --a-engineering: #6a6fc9;
+  --a-modernization: #2ba7a1;
+  --a-renovation: #9a6fc9;
+  --a-verification: #d8a638;
+  --a-verified: #4fae8a;
+
+  /* --- Semantic --- */
+  --color-danger: #c9503f;
+  --color-warning: #d8a638;
+  --color-success: #4fae8a;
+  --color-info: #3d8fc4;
+  --color-demo: #b57edc;
+
+  /* --- Typography --- */
+  --font-display: "Fira Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --fs-2xs: 0.6875rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-md: 0.9375rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+
+  /* --- Spacing scale --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-panel: 0 8px 24px rgba(3, 7, 12, 0.45);
+  --shadow-pop: 0 2px 8px rgba(3, 7, 12, 0.35);
+
+  --header-height: 56px;
+  --z-header: 100;
+  --z-panel: 80;
+  --z-drawer: 90;
+  --z-modal: 200;
+  --z-legend: 60;
+  --z-toast: 300;
+}
+
+@media (prefers-color-scheme: light) {
+  /* Actual switching is driven by [data-theme] below, set from JS with a
+     localStorage-persisted choice; this media query only affects the very
+     first paint before React/useTheme has attached the attribute. */
+}
+
+/*
+  Light theme. Status color scales (knowledge/risk/action) are re-tuned for
+  sufficient contrast on a light background rather than reused verbatim —
+  a straight copy of the dark palette reads as washed-out on white.
+*/
+[data-theme="light"] {
+  --bg-canvas: #f4f6f8;
+  --bg-surface: #ffffff;
+  --bg-surface-raised: #ffffff;
+  --bg-inset: #eef1f4;
+  --border-subtle: #dde3e9;
+  --border-strong: #c3ccd6;
+
+  --text-primary: #16202b;
+  --text-secondary: #4b5b6b;
+  --text-tertiary: #7c8a99;
+  --text-inverse: #ffffff;
+
+  --brand-deep: #0d2f4f;
+  --brand-mid: #1c5a8c;
+  --brand-bright: #1f6fa8;
+  --accent-teal: #1d8a84;
+
+  --k-unknown: #8b96a3;
+  --k-reported: #4f9bd6;
+  --k-inspected: #1f6fa8;
+  --k-documented: #0d3f66;
+  --k-verified: #1d8a84;
+
+  --r-not-assessed: #8b96a3;
+  --r-low: #2f8f68;
+  --r-medium: #b2811e;
+  --r-high: #c1602c;
+  --r-specialist: #b23c2c;
+
+  --a-none: #8b96a3;
+  --a-data: #5f7285;
+  --a-inspection: #1f6fa8;
+  --a-quickwin: #2f8f68;
+  --a-engineering: #4d52ad;
+  --a-modernization: #1d8a84;
+  --a-renovation: #7f52ad;
+  --a-verification: #b2811e;
+  --a-verified: #2f8f68;
+
+  --color-danger: #b23c2c;
+  --color-warning: #b2811e;
+  --color-success: #2f8f68;
+  --color-info: #1f6fa8;
+  --color-demo: #8a4fc4;
+
+  --shadow-panel: 0 8px 24px rgba(22, 32, 43, 0.12);
+  --shadow-pop: 0 2px 8px rgba(22, 32, 43, 0.1);
+}

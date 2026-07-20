@@ -1,0 +1,38 @@
+.app-shell {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-canvas);
+}
+
+.app-main {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-map-area {
+  position: absolute;
+  inset: 0;
+}
+
+.app-map-footer {
+  position: absolute;
+  left: var(--sp-4);
+  bottom: var(--sp-4);
+  z-index: var(--z-legend);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-2xs);
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 720px) {
+  .app-map-footer {
+    display: none;
+  }
+}
